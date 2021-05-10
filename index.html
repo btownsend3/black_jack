@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container-fluid table">
+      <div class="row">
+        <!-- Chips and bet size -->
+        <div class="bets col-3">
+          <p id="bankroll"></p>
+          <p id="bet"></p>
+          <div class="d-flex">
+            <button class="chips one" id="one" onClick="bet(1)">1</button>
+            <button class="chips five" id="five"onClick="bet(5)">5</button>
+          </div>
+          <div class="d-flex">
+            <button class="chips twenty" id="twenty" onClick="bet(20)">20</button>
+            <button class="chips fifty" id="fifty" onClick="bet(50)">50</button>
+          </div>
+          <div class="d-flex">
+            <button class="clear" id="clear" onClick="clearBet()">Clear </button>
+            <button class="x2" id="x2" onClick="doubleBet()">X2</button>
+          </div>
+        </div>
+        <!-- Cards -->
+        <div class="col-6">
+          <div class="dealerCards d-flex flex-wrap">
+            <img class="card" id="dealerCard1" src="">
+            <img class="card" id="dealerCard2" src="">
+            <img class="card" id="dealerCard3" src="">
+            <img class="card" id="dealerCard4" src="">
+            <img class="card" id="dealerCard5" src="">
+            <img class="card" id="dealerCard6" src="">
+            <img class="card" id="dealerCard7" src="">
+          </div>
+          <div class="playerCards d-flex flex-wrap">
+            <img class="card" id="playerCard1" src="">
+            <img class="card" id="playerCard2" src="">
+            <img class="card" id="playerCard3" src="">
+            <img class="card" id="playerCard4" src="">
+            <img class="card" id="playerCard5" src="">
+            <img class="card" id="playerCard6" src="">
+            <img class="card" id="playerCard7" src="">
+          </div>
+          <br>
+          <h2 id="message"></h2>
+        </div>
+        <!-- Player options -->
+        <div class="col-3 d-flex flex-column">
+          <button class="moves hit" id="hit" onClick="hit()">Hit</button>
+          <button class="moves stand" id="stand" onClick="dealerPlay()">Stand</button>
+          <button class="moves deal" id="deal" onClick="deal()">Deal</button>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>

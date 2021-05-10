@@ -1,0 +1,93 @@
+.table {
+  background-color: #35654d;
+  padding-bottom: 100px;
+}
+
+button:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.moves:disabled {
+  background-color: #4f6359;
+}
+
+.chips {
+  border-radius: 50%;
+  border: 3px dashed white;
+  color: white;
+  height: 35px;
+  width: 35px;
+  margin-bottom: 2.5px;
+  margin-right: 5px;
+}
+
+.one {
+  background-color: blue;
+}
+
+.five {
+  background-color: red;
+}
+
+.twenty {
+  background-color: green;
+}
+
+.fifty {
+  background-color: black;
+}
+
+.clear, .x2 {
+  background-color: #35654d;
+  border: 0;
+  color: white;
+}
+
+.card {
+  background-color: #35654d;
+  height: 70px;
+  width: 50px;
+  display: block;
+  margin-left: -15px;
+  margin-top: 15px;
+}
+
+img[src=""] {
+  display: none;
+}
+
+.moves {
+  margin-top: 10px;
+  border: 1px double black;
+  background-color: #35654d;
+  color: white;
+  width: 70px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+  .card {
+    height: 70px;
+    width: 50px;
+  }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .card {
+    height: 140px;
+    width: 100px;
+    margin-left: -30px;
+  }
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
