@@ -1,6 +1,14 @@
+html {
+  background-color: #35654d;
+}
 .table {
   background-color: #35654d;
   padding-bottom: 100px;
+}
+
+p {
+  font-weight: 700;
+  font-size: 20px;
 }
 
 button:focus {
@@ -8,40 +16,68 @@ button:focus {
   text-decoration: none;
 }
 
-.moves:disabled {
-  background-color: #4f6359;
+button:hover {
+  cursor: pointer;
+}
+
+#count {
+  position: absolute;
 }
 
 .chips {
   border-radius: 50%;
-  border: 3px dashed white;
+  border: none;
   color: white;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
+  flex-shrink: 0;
   margin-bottom: 2.5px;
   margin-right: 5px;
+  position: relative;
+  box-shadow: 2px 2px black;
 }
 
 .one {
-  background-color: blue;
+  background-image: url(images/blue-chip.png);
+  object-fit: cover;
 }
 
 .five {
-  background-color: red;
+  background-image: url(images/red-chip.png);
+  object-fit: cover;
 }
 
 .twenty {
-  background-color: green;
+  background-image: url(images/green-chip.png);
+  object-fit: cover;
 }
 
 .fifty {
-  background-color: black;
+  background-image: url(images/black-chip.png);
+  object-fit: cover;
 }
 
 .clear, .x2 {
   background-color: #35654d;
+  position: relative;
+  right: 5px;
   border: 0;
   color: white;
+  position: relative;
+}
+
+.clear, .x2, .chips {
+    top: 100px;
+  }
+
+#count-toggle {
+  top: 70px;
+  background-color: #35654d;
+  color: white;
+}
+
+.player {
+  top: 100px;
 }
 
 .card {
@@ -51,6 +87,11 @@ button:focus {
   display: block;
   margin-left: -15px;
   margin-top: 15px;
+  box-shadow: 1px 1px black;
+}
+
+.dealerCards, .playerCards {
+  margin-left: 25px;
 }
 
 img[src=""] {
@@ -58,36 +99,57 @@ img[src=""] {
 }
 
 .moves {
+  display: block;
   margin-top: 10px;
-  border: 1px double black;
+  margin-right: 10px;
+  border: 1px solid black;
   background-color: #35654d;
   color: white;
   width: 70px;
+  height: 60px;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
+.moves-container {
+  padding-top: 100px;
+  margin-right: -15px;
+}
+
+#message {
+  position: absolute;
+  margin-top: 45px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 400px) {
   .card {
     height: 70px;
     width: 50px;
+    left: 20px;
+  }
+  #message {
+    margin-top: 45px;
   }
 }
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
- 
+
+@media (min-width: 576px) {  
+  .card {
+    height: 105px;
+    width: 75px;
+  }
 }
- 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+
+@media (min-width: 768px) {  
   .card {
     height: 140px;
     width: 100px;
     margin-left: -30px;
   }
+  .clear {
+    margin-left: 5px;
+    margin-right: 15px;
+  }
 }
  
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-    
-}
